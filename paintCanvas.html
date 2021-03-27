@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>PaintCanvas</title>
+</head>
+<body>
+
+    <div class="menu">
+   <br>
+   <div class="inner">
+<div>
+    <input type="color" id="pLine" value="#000000">
+    <br>
+    <label for ="pLine">Color</label>
+    
+</div>
+<br>
+
+<div class="sizeSlider">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <br>
+    <label for="myRange">Size</label>    
+</div>
+<br><br>
+
+<div>
+    <button onclick="clearC()" id="bClear">Clear</button>
+   
+</div>
+</div>
+
+</div>
+
+
+<canvas id="canvas"></canvas>
+    
+    <script src="paintJS.js"></script>
+
+</body>
+</html>

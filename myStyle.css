@@ -6,13 +6,48 @@
     transform: translate(-50%, -50%);
   }
   #score {
-    text-align: center;
-    font-size: 80px;
+    position: relative;
+    margin-top: 38%;
+    margin-left: 50%;
+    font-size: 60px;
   }
   #scoreboard {
     position: absolute;
-    width: 100px;
-    top: 50px;
-    left: 5 px;
+    width: 250px;
+    height: 416px;
+    top: 27%;
+    left: 20%;
     border: 2px solid black;
   }
+  #snakePic{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 5px;
+    left: 45%;
+  }
+  #scoreTable {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+  }
+  #myPlay{
+    width: 100px;
+    height: 45px;
+    background-color: purple;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+  }
+
+  #mySave{
+    width: 100px;
+    height: 45px;
+    background-color: rgb(128, 105, 0);
+    font-size: 25px;
+    position: absolute;
+    top: 43%;
+    left: 65%;
+  }
+

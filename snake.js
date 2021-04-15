@@ -91,6 +91,8 @@ const board_border = 'black';
         if (snake[i].x === snake[0].x && snake[i].y === snake[0].y)
          return true
       }
+
+      
       const hitLeftWall = snake[0].x < 0;
       const hitRightWall = snake[0].x > snakeboard.width - 20;
       const hitToptWall = snake[0].y < 0;

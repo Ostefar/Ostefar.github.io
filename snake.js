@@ -1,6 +1,6 @@
 const board_border = 'black';
-    const board_background = "lightgrey";
-    const snake_col = "red";
+    const board_background = 'lightgrey';
+    const snake_col = 'red' ;
     const snake_border = 'solid black';
     
     let snake = [
@@ -22,9 +22,9 @@ const board_border = 'black';
     
     
     // Get the canvas element
-    const snakeboard = document.getElementById("snakeboard");
+    const snakeGame = document.getElementById("snakeGame");
     // Return a two dimensional drawing context
-    const snakeboard_ctx = snakeboard.getContext("2d");
+    const ctx = snakeGame.getContext("2d");
     // Start game
     main();
 
@@ -36,7 +36,7 @@ const board_border = 'black';
     function main() {
 
         if (has_game_ended()) return;
-
+    
         changing_direction = false;
         setTimeout(function onTick() {
         clear_board();
@@ -51,13 +51,13 @@ const board_border = 'black';
     // draw a border around the canvas
     function clear_board() {
       //  Select the colour to fill the drawing
-      snakeboard_ctx.fillStyle = board_background;
+      ctx.fillStyle = board_background;
       //  Select the colour for the border of the canvas
-      snakeboard_ctx.strokestyle = board_border;
+      ctx.strokestyle = board_border;
       // Draw a "filled" rectangle to cover the entire canvas
-      snakeboard_ctx.fillRect(0, 0, snakeboard.width, snakeboard.height);
+      ctx.fillRect(0, 0, snakeGame.width, snakeGame.height);
       // Draw a "border" around the entire canvas
-      snakeboard_ctx.strokeRect(0, 0, snakeboard.width, snakeboard.height);
+      ctx.strokeRect(0, 0, snakeGame.width, snakeGame.height);
     }
     
     // Draw the snake on the canvas
@@ -67,23 +67,23 @@ const board_border = 'black';
     }
 
     function drawFood() {
-      snakeboard_ctx.fillStyle = 'darkgreen';
-      snakeboard_ctx.strokestyle = 'darkgreen';
-      snakeboard_ctx.fillRect(food_x, food_y, 20, 20);
-      snakeboard_ctx.strokeRect(food_x, food_y, 20, 20);
+      ctx.fillStyle = 'darkgreen';
+      ctx.strokestyle = 'darkgreen';
+      ctx.fillRect(food_x, food_y, 20, 20);
+      ctx.strokeRect(food_x, food_y, 20, 20);
     }
     
     // Draw one snake part
     function drawSnakePart(snakePart) {
 
       // Set snake insides color
-      snakeboard_ctx.fillStyle =  snake_col;
+      ctx.fillStyle =  snake_col;
       // Set snake border colour 
-      snakeboard_ctx.strokestyle = snake_border;
+      ctx.strokestyle = snake_border;
       // the part is located
-      snakeboard_ctx.fillRect(snakePart.x, snakePart.y, 20, 20);
-      // Draw a border around the snake part
-      snakeboard_ctx.strokeRect(snakePart.x, snakePart.y, 20, 20);
+      ctx.fillRect(snakePart.x, snakePart.y, 20, 20);
+      // Border the snake part
+      ctx.strokeRect(snakePart.x, snakePart.y, 20, 20);
     }
 
     function has_game_ended() {
@@ -92,11 +92,11 @@ const board_border = 'black';
          return true
       }
 
-      
+
       const hitLeftWall = snake[0].x < 0;
-      const hitRightWall = snake[0].x > snakeboard.width - 20;
+      const hitRightWall = snake[0].x > snakeGame.width - 20;
       const hitToptWall = snake[0].y < 0;
-      const hitBottomWall = snake[0].y > snakeboard.height - 20;
+      const hitBottomWall = snake[0].y > snakeGame.height - 20;
       
       return hitLeftWall || hitRightWall || hitToptWall || hitBottomWall
       
@@ -108,9 +108,9 @@ const board_border = 'black';
 
     function gen_food() {
       // Generate a random number for the food x-coordinate
-      food_x = random_food(0, snakeboard.width - 20);
+      food_x = random_food(0, snakeGame.width - 20);
       // Generate a random number for the food y-coordinate
-      food_y = random_food(0, snakeboard.height - 20);
+      food_y = random_food(0, snakeGame.height - 20);
       // if the new food location is where the snake currently is, generate a new food location
       snake.forEach(function has_snake_eaten_food(part) {
         const has_eaten = part.x == food_x && part.y == food_y;

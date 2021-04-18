@@ -1,0 +1,48 @@
+#myLogo{
+  position: absolute;
+  top: 5%;
+  left: 42%;
+} 
+#snakePic{
+  width: 350px;
+  height: 150px;
+}
+
+#myMidContent{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+#myScoreboard {
+position: absolute;
+top: 30%;
+left: 15%;
+width: 20%;
+    
+  } 
+#snakeGame {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  border: 10px solid black;
+}
+
+#myButtons{
+position: absolute;
+top: 45%;
+left: 65%;
+}
+
+#myButtons:hover{
+cursor: pointer;
+}
+
+#score {
+  position: relative;
+  margin-top: 38%;
+  margin-left: 50%;
+  font-size: 60px;
+}

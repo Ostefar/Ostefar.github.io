@@ -10,15 +10,15 @@ let totalBets = [];
 // Total amount (current value) 
 let total = [100];
 
-//background music
+// Background music
 let audio = new Audio("wheelOfFortune.mp3");
 
-//Spin sound
+// Spin sound
 let audio1 = new Audio('bikewreck.mp3');
 
 let startAngle = 0;
 
-//division of circle dividede by length of array 
+// Division of circle dividede by length of array 
 let arc = Math.PI / (options.length / 2);
 let spinTimeout = null;
 
@@ -33,7 +33,6 @@ let spinTimeTotal = 0;
   const ctx = canvas.getContext("2d");
 
   // Start game
-  audio.play();
   drawWheel();
   
 
@@ -48,6 +47,7 @@ let spinTimeTotal = 0;
     
     // draw the wheel and insert options from option array
     function drawWheel() {
+        audio.play();
         if (canvas.getContext) {
             //mainWheel
             var outsideRadius = 230;

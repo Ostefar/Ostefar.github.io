@@ -34,7 +34,7 @@ let spinTimeTotal = 0;
 
   // Start game
   drawWheel();
-  audio.play();
+  playMusic();
   
   
 
@@ -180,6 +180,9 @@ let spinTimeTotal = 0;
 
     function pauseMusic(){
         audio.pause();
+    }
+    function playMusic(){
+        audio.play();
     }
     // to retrieve and display chozen amount from slider
     function sliderChange(val) {

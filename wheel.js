@@ -33,8 +33,9 @@ let spinTimeTotal = 0;
   const ctx = canvas.getContext("2d");
 
   // Start game
-  drawWheel();
   audio.play();
+  drawWheel();
+  
 
     //colors the wheel
     function getColor(item) {

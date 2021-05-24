@@ -11,7 +11,7 @@ let totalBets = [];
 let total = [100];
 
 // Background music
-let audio = new Audio("wheelOfFortune.mp3");
+let audio = new Audio('wheelOfFortune.mp3');
 
 // Spin sound
 let audio1 = new Audio('bikewreck.mp3');

@@ -34,6 +34,8 @@ let spinTimeTotal = 0;
 
   // Start game
   drawWheel();
+  audio.play();
+  
   
 
     //colors the wheel
@@ -117,7 +119,6 @@ let spinTimeTotal = 0;
             ctx.lineTo(250 - 5, 250 - (outsideRadius + 5));
             ctx.fill();
         }
-        audio.play();
     }
     /* Start spinning cyclys of the next 4 functions spin() initiates rotateWheel(), which calls easeOut()
     and initiates stopRotateWheel()

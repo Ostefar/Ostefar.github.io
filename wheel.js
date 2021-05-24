@@ -34,7 +34,6 @@ let spinTimeTotal = 0;
 
   // Start game
   drawWheel();
-  playMusic();
   
   
 

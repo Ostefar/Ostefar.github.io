@@ -1,48 +1,51 @@
-#myLogo{
-  position: absolute;
-  top: 5%;
-  left: 42%;
-} 
-#snakePic{
-  width: 350px;
-  height: 150px;
+#center{
+    justify-content: center;
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-#myMidContent{
-  width: 100%;
-  height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+#left{
+    position: absolute;
+    background-color: rgb(217, 161, 245);
+    top: 0px;
+    left: 0px;
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-top: 150px;
+    padding-bottom: 100%;
+    border: 3px solid rgb(206, 142, 238);
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif
 }
-
-#myScoreboard {
-position: absolute;
-top: 30%;
-left: 15%;
-width: 20%;
-    
-  } 
-#snakeGame {
-  position: absolute;
-  top: 30%;
-  left: 40%;
-  border: 10px solid black;
+#left label{
+font-weight: bold;
+text-decoration: underline;
 }
-
-#myButtons{
-position: absolute;
-top: 45%;
-left: 65%;
-}
-
-#myButtons:hover{
-cursor: pointer;
-}
-
-#score {
-  position: relative;
-  margin-top: 38%;
-  margin-left: 49%;
-  font-size: 60px;
-}
+/*origin: w3schools */
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 10px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 12px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: #aa0404; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }

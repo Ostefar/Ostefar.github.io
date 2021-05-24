@@ -4,68 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
     <link rel="stylesheet" href="myStyle.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title></title>
+    <title>Wheel of Fortune</title>
 </head>
-<body style="background-color: gray;">
-    
-<div id="myLogo">
-  <img id="snakePic" src="snakePic.png" alt="snakePicture" style="align-self: center;">
-</div>
+<body style="background-color: rgb(229, 181, 253);">
 
-    <div id="myScoreboard">
-    <table class="table table-hover table-dark">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Name</th>
-          <th scope="col">Score</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>-</td>
-        </tr>
-      </tbody>
-    </table>
-    <br><br>
-  </div>
+    <div id="center">
+        <img src="WheelOfFortune.PNG" alt="wheeloffortune">
+        <br>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <script src="wheel.js"></script>
+        <br>
+        <button type="button" onclick="spin()" id="spin" class="btn btn-outline-success">Spin</button>
+    </div>
 
-   <!--TODO replace pixel snake with sprite?-->
-   <div>
-  <canvas id="snakeGame" width="400" height="400"></canvas>
-  <script src="snake.js"></script>
-</div>
-
-
-  <div id="myButtons">
-    <button type="button" class="btn btn-success" onClick="location.reload();">Play</button>
-    <br><br>
-    
-    <!--TODO make function for saving and import on scoreboard-->
-    <button type="button" class="btn btn-primary" onClick="location.reload();">Save</button>
-  </div>
- <br><br>
-
-   <div id="score">0</div>
-
-  
-
-
+    <div id="left">
+        <label for="total">Current funds</label>
+        <p id="total">100$</p>
+        <label for="playerBet">Place your bet</label>
+        <br>
+        <input id="playerBet" class="slider" type="range" min="0" max="100" step="5" value="0" oninput="sliderChange(this.value)">
+        <output id="output">0$</output>
+        <br><br>
+        <label for="winnings">Last spins</label>
+        <p id="winnings"> </p>
+        <br>
+        <label for="totalBets">Last bets</label>
+        <p id="totalBets"> </p>
+        <br><br><br>
+        <button id="mute" onclick="pauseMusic()" class="btn btn-outline-danger">Mute</button>
+    </div>
 </body>
 </html>

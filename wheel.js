@@ -1,13 +1,13 @@
 // Stores winning possibilities - eventually use db instead
 let options = ["200", "20", "0", "100", "50", "0", "100", "200", "500","40", "0", "400"];
 
-//TODO - beautify records show- eventually use db instead
+// Stores winning records
 let records = [];
 
-//TODO - beautify total show- eventually use db instead
+// Stores totalbets
 let totalBets = [];
 
-// Total amount (current value) 
+// Stores total amount 
 let total = [100];
 
 // Background music
@@ -16,6 +16,7 @@ let audio = new Audio('wheelOfFortune.mp3');
 // Spin sound
 let audio1 = new Audio('bikewreck.mp3');
 
+// Start angle
 let startAngle = 0;
 
 // Division of circle dividede by length of array 
@@ -35,8 +36,6 @@ let spinTimeTotal = 0;
   // Start game
   drawWheel();
   
-  
-
     //colors the wheel
     function getColor(item) {
         if(item % 2 == 0){
@@ -141,13 +140,9 @@ let spinTimeTotal = 0;
         drawWheel();
         spinTimeout = setTimeout('rotateWheel()', 20);
     }
-    /* Stops the wheel, calculates winnings and draws the amount at the center of the circle.
-     -- TODO --
-        make changes to winning variable so calculations will be more precise
-        make exact calculations on winning rates 
-        add tests for calculations
-        maybe a test function that runs the code ex. amount of times and prints the values
-     */
+    // Stops the wheel, calculates winnings and draws the amount at the center of the circle.
+
+    
     function stopRotateWheel() {
         clearTimeout(spinTimeout);
         let degrees = startAngle * 180 / Math.PI + 90;

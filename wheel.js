@@ -1,6 +1,7 @@
 // Stores winning possibilities - eventually use db instead
 let options = ["200", "20", "0", "100", "50", "0", "100", "200", "500","40", "0", "400"];
 
+<<<<<<< Updated upstream
 // Stores winning records
 let records = [];
 
@@ -20,6 +21,26 @@ let audio1 = new Audio('bikewreck.mp3');
 let startAngle = 0;
 
 // Division of circle dividede by length of array 
+=======
+//TODO - beautify records show- eventually use db instead
+let records = [];
+
+//TODO - beautify total show- eventually use db instead
+let totalBets = [];
+
+// Total amount (current value) 
+let total = [100];
+
+//background music
+let audio = new Audio("wheelOfFortune.mp3");
+
+//Spin sound
+let audio1 = new Audio('bikewreck.mp3');
+
+let startAngle = 0;
+
+//division of circle dividede by length of array 
+>>>>>>> Stashed changes
 let arc = Math.PI / (options.length / 2);
 let spinTimeout = null;
 
@@ -35,7 +56,12 @@ let spinTimeTotal = 0;
 
   // Start game
   drawWheel();
+<<<<<<< Updated upstream
   
+=======
+  audio.play();
+
+>>>>>>> Stashed changes
     //colors the wheel
     function getColor(item) {
         if(item % 2 == 0){
@@ -140,9 +166,19 @@ let spinTimeTotal = 0;
         drawWheel();
         spinTimeout = setTimeout('rotateWheel()', 20);
     }
+<<<<<<< Updated upstream
     // Stops the wheel, calculates winnings and draws the amount at the center of the circle.
 
     
+=======
+    /* Stops the wheel, calculates winnings and draws the amount at the center of the circle.
+     -- TODO --
+        make changes to winning variable so calculations will be more precise
+        make exact calculations on winning rates 
+        add tests for calculations
+        maybe a test function that runs the code ex. amount of times and prints the values
+     */
+>>>>>>> Stashed changes
     function stopRotateWheel() {
         clearTimeout(spinTimeout);
         let degrees = startAngle * 180 / Math.PI + 90;
@@ -175,9 +211,12 @@ let spinTimeTotal = 0;
     function pauseMusic(){
         audio.pause();
     }
+<<<<<<< Updated upstream
     function playMusic(){
         audio.play();
     }
+=======
+>>>>>>> Stashed changes
     // to retrieve and display chozen amount from slider
     function sliderChange(val) {
         document.getElementById('output').innerHTML = val + "$";
